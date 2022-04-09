@@ -7,8 +7,6 @@ var chat = {
   msg: null,
   socket: new WebSocket(host),
   init: () => {
-    chat.socket.addEventListener("open", () => {
-      chat.send(`${name} has entered the chat.`);
-    });
+    chat.send(`${name} has entered the chat.`);
   }
 }
