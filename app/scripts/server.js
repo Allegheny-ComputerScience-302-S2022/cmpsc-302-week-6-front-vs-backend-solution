@@ -1,6 +1,13 @@
-var ws = require('ws');
-var server = new ws.Server({port: 8080});
+const ws = require('ws');
+const server = new ws.Server({port: 8080});
+const port = process.env.port || 8080;
+
+server.listen(port, () => {
+  console.log(`Server listening at $(port}.`);
+});
+
 var users = {};
+
 
 server.on("connection", (socket, request) => {
 
