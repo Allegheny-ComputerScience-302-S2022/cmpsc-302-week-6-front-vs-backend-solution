@@ -1,13 +1,13 @@
+const express = require('express');
 const ws = require('ws');
-const server = new ws.Server({port: 8080});
 const port = process.env.port || 8080;
+const index = "/index.html";
 
-server.listen(port, () => {
-  console.log(`Server listening at $(port}.`);
-});
+const server = express();
+  .use((request, result) => result.sendFile(index, {root: app}))
+  .listen(port, () => console.log(`Listening on ${port}`));
 
 var users = {};
-
 
 server.on("connection", (socket, request) => {
 
