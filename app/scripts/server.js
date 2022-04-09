@@ -24,8 +24,6 @@ socket.on("connection", (sock, request) => {
     uid++;
   }
 
-  console.log(uid);
-
   sock.on("close", () => {
     delete users[uid];
   });

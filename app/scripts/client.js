@@ -9,4 +9,6 @@ var chat = {
   init: () => {
     chat.send(`${name} has entered the chat.`);
   }
-}
+};
+
+window.addEventListener("DOMContentLoaded", chat.init);
