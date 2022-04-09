@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
+}
+
+form {
+  padding: 2%;
+}
+
+form > textarea, form > button {
+  width: 100%;
+  display: block;
+  margin: 1% auto;
+}
+
+#chat-mgmt {
+  background: #999;
+}
+
+#chat-window {
+  background: #666;
+}

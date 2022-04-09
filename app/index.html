@@ -1,3 +1,21 @@
 <html>
-  INDEX
+  <head>
+    <title>CMPSC 302: Cat Chat</title>
+    <link href="style/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div id="chat-mgmt">
+        <form onsubmit="return chat.send()">
+          <textarea></textarea>
+          <button>
+            Send
+          </button>
+        </form>
+      </div>
+      <div id="chat-window">
+      </div>
+    </main>
+  <script src="scripts/client.js" type="text/javascript"></script>
+  </body>
 </html>
