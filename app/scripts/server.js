@@ -7,7 +7,7 @@ const server = express()
   .use((request, result) => result.sendFile(index, {root: app}))
   .listen(port, () => console.log(`Listening on ${port}`));
 
-const socket = new Server({ server });
+const socket = new ws({ server });
 
 var users = {};
 
