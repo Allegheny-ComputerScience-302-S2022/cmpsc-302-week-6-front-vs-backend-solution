@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Allegheny-ComputerScience-302-S2022/cmpsc-302-week-6-full-stack-solution#readme",
   "dependencies": {
+    "express": "^4.17.3",
     "g": "^2.0.1",
     "semver": "^7.3.6",
     "ws": "^8.5.0"

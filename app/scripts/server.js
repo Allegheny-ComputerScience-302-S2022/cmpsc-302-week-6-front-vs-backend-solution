@@ -3,7 +3,7 @@ const ws = require('ws');
 const port = process.env.port || 8080;
 const index = "/index.html";
 
-const server = express();
+const server = express()
   .use((request, result) => result.sendFile(index, {root: app}))
   .listen(port, () => console.log(`Listening on ${port}`));
 
