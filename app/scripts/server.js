@@ -4,7 +4,7 @@ const port = process.env.PORT || 8080;
 const index = "/index.html";
 
 const server = express()
-  .use((request, result) => result.sendFile(index, {root: app}))
+  .use((request, result) => result.sendFile(index, {root: __dirname}))
   .listen(port, () => console.log(`Listening on ${port}`));
 
 const socket = new Server({ server });
