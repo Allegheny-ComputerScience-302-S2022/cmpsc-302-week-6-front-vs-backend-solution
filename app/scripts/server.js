@@ -1,10 +1,10 @@
 const express = require('express');
 const { Server } = require('ws');
 const port = process.env.PORT || 8080;
-const index = "/index.html";
+const index = "index.html";
 
 const server = express()
-  .use((request, result) => result.sendFile(index, {root: ../}))
+  .use((request, result) => result.sendFile(index, {root: process.cwd()}))
   .listen(port, () => console.log(`Listening on ${port}`));
 
 const socket = new Server({ server });
