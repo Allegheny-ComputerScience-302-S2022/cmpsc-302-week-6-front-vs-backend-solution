@@ -34,7 +34,6 @@ nameEntry.addEventListener("keydown", (evt) => {
 
 var chat = {
   name: null,
-  msg: null,
   socket: new WebSocket(host),
   init: () => {
 
@@ -63,6 +62,7 @@ var chat = {
     if(typeof(msg.text) !== "string") return false;
 
     chat.socket.send(JSON.stringify(msg));
+
     if(type !== "ping") sendMsg.value = "";
     return false;
   },

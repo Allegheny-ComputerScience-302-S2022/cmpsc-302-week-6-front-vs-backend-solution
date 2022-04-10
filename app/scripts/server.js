@@ -36,8 +36,9 @@ socket.on("connection", (sock, request) => {
 
   sock.on("message", (message) => {
     message = JSON.parse(message);
-    let name = message.name.toString();
-    let msg = message.text.toString();
+    console.log(message)
+    let name = message.name;
+    let msg = message.text;
     let type = emoji[message.type];
     for (let user in users) {
       if (message.type === "ping") break;
