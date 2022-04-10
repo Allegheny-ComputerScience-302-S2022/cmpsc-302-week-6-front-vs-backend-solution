@@ -13,9 +13,9 @@ const socket = new Server({ server });
 var users = {};
 
 const emoji = {
-  "greet": "👋",
-  "normal": "🗣️",
-  "ping": "🔊",
+  "greet": ["👋"],
+  "normal": ["😹","🐱","😼","😸","🙀"]
+  "ping": ["🔊"],
 }
 
 socket.on("connection", (sock, request) => {
@@ -39,9 +39,10 @@ socket.on("connection", (sock, request) => {
     let name = message.user;
     let msg = message.text;
     let type = emoji[message.type];
+    let chosenIcon = type[Math.floor(Math.random() * type.length)];
     for (let user in users) {
       if (message.type === "ping") break;
-      users[user].send(`${name} ${type} ${msg}`);
+      users[user].send(`${name} ${chosenIcon} ${msg}`);
     }
   });
 

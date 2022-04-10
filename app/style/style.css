@@ -26,7 +26,7 @@ textarea {
   border-radius: 10px;
   color: #FFF;
   font-family: lores-21-serif, sans-serif;
-
+  font-size: 1.5em;
 }
 
 form > textarea, form > button {
@@ -54,9 +54,18 @@ form > input {
 }
 
 #chatLogin form > button {
-  font-size: 3em;
+  font-size: 2em;
   background: none;
   border: 0;
+}
+
+#chatLogin form > input {
+  border: 0;
+  border-bottom: 1px solid #FFF;
+  background: none;
+  font-size:2em;
+  font-family: lores-21-serif, sans-serif;
+  color: #FFF;
 }
 
 #chat-mgmt {
@@ -83,7 +92,7 @@ form > input {
 }
 
 #chat-window > p {
-  padding: 1%;  
+  margin: .5%;
 }
 
 #chat-window > p:first-child {
@@ -133,5 +142,4 @@ form > input {
   #chatLogin, #chatLogin input, #chatLogin button {
     font-size: 1em;
   }
-
 }
