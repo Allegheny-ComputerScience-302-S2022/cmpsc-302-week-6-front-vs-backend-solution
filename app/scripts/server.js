@@ -30,8 +30,9 @@ socket.on("connection", (sock, request) => {
 
   sock.on("message", (message) => {
     for (let user in users) {
-      console.log(message.toString());
-      users[user].send(message.toString());
+      let msg = message.toString();
+      console.log(msg);
+      users[user].send(msg);
     }
   });
 

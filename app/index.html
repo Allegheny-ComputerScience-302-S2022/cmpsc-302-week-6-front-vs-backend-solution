@@ -6,9 +6,13 @@
   <body>
     <main>
       <div id="chat-mgmt">
-        <form onsubmit="return chat.send()">
-          <textarea></textarea>
-          <button>
+        <form id = "chatForm" onsubmit="return chat.send()">
+          <input type="text" id = "nameEntry"></input>
+          <button id = "setName" type = "button">
+            Set UserName
+          </button>
+          <textarea id = "sendMsg" disabled></textarea>
+          <button id = "sendBtn" disabled>
             Send
           </button>
         </form>

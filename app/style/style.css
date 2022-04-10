@@ -18,10 +18,16 @@ form > textarea, form > button {
   margin: 1% auto;
 }
 
+form > input {
+  width: 100%;
+}
+
 #chat-mgmt {
   background: #999;
 }
 
 #chat-window {
+  color: #FFF;
   background: #666;
+  padding: 5%;
 }
