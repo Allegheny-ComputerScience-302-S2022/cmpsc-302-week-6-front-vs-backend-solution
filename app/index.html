@@ -12,7 +12,7 @@
         <h1>😸 Hi! To use CatChat, you need a username!😸</h1>
         <p>Please set one below.</p>
         <form id = "nameForm">
-          <label for="nameEntry" title="Username selection"></label>
+          <label for="nameEntry" title="Username selection" aria-labeledby="Username selection"></label>
           <input type="text" id = "nameEntry"></input>
           <button id = "setName" type = "button">
             ➡️ 
@@ -22,7 +22,7 @@
       </div>
       <div id="chat-mgmt">
         <form id = "chatForm" onsubmit="return chat.send(this, 'normal')">
-          <label for="sendMsg" title="Message entry" hidden></label>
+          <label for="sendMsg" title="Message entry" aria-labeledby="Message entry" hidden></label>
           <textarea id = "sendMsg" disabled></textarea>
           <button id = "sendBtn" disabled>
             📤
