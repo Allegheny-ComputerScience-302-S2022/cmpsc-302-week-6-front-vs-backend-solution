@@ -12,6 +12,11 @@ const socket = new Server({ server });
 
 var users = {};
 
+const emoji = {
+  "greet": "👋",
+  "normal": "🕫"
+}
+
 socket.on("connection", (sock, request) => {
 
   let uid = 0;
@@ -29,10 +34,10 @@ socket.on("connection", (sock, request) => {
   });
 
   sock.on("message", (message) => {
+    let msg = message.text.toString();
+    let type = emoji[message.type].toString();
     for (let user in users) {
-      let msg = message.toString();
-      console.log(msg);
-      users[user].send(msg);
+      users[user].send(`${type} ${msg}`);
     }
   });
 

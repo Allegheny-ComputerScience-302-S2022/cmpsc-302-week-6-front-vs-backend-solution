@@ -2,6 +2,8 @@ var host = "ws://" + (location.host || "chat.cmpsc302.chompe.rs");
 
 setName.addEventListener("click", () => {
   chat.name = nameEntry.value;
+  setName.setAttribute("disabled","true");
+  nameEntry.setAttribute("disabled","true");
   sendMsg.removeAttribute("disabled");
   sendBtn.removeAttribute("disabled");
   chat.init()
@@ -15,26 +17,26 @@ var chat = {
 
     chat.window = document.getElementById("chat-window");
 
-    //chat.socket.onopen = () => {
-    //  chat.send(`${chat.name} has entered the chat.`);
-    //}
-
-    chat.send(`${chat.name} has entered the chat.`);
+    chat.send(`${chat.name} has entered the chat.`, "greet");
 
     chat.socket.addEventListener("message", (evt) => {
       let msg = evt.data;
-      chat.draw(msg);
+      chat.post(msg);
     });
 
   },
 
-  send: (message) => {
-    let msg = sendMsg.value || message;
+  send: (message, type) => {
+    let msg = {
+      text: sendMsg.value || message,
+      type: type
+    }
     chat.socket.send(msg);
+    sendMsg.value = "";
     return false;
   },
 
-  draw: (message) => {
+  post: (message) => {
     let msg = document.createElement("p");
     msg.className = "chat-msg";
     msg.innerText = `${message}`;
@@ -43,5 +45,3 @@ var chat = {
   },
 
 };
-
-//window.addEventListener("load", chat.init);

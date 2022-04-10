@@ -31,3 +31,28 @@ form > input {
   background: #666;
   padding: 5%;
 }
+
+.chat-msg {
+  background: blue;
+  padding: 1%;
+}
+
+.chat-msg:nth-of-type(2n) {
+  background: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  
+  main {
+    grid-template-columns: auto;
+    grid-template-rows: 75vh auto;
+  }  
+
+  #chat-mgmt {
+    order: 2;
+  }
+  
+  #chat-window {
+    order: 1
+  }
+}
