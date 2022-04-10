@@ -1,12 +1,35 @@
 var host = "ws://" + (location.host || "chat.cmpsc302.chompe.rs");
 
+// Manage the username dialog
+
 setName.addEventListener("click", () => {
+  let name = nameEntry.value;
+  if(!name) return false;
+
   chat.name = nameEntry.value;
-  setName.setAttribute("disabled","true");
-  nameEntry.setAttribute("disabled","true");
+
+  chatLogin.setAttribute("hidden","true");
+
   sendMsg.removeAttribute("disabled");
   sendBtn.removeAttribute("disabled");
+
   chat.init()
+});
+
+sendMsg.addEventListener("keydown", (evt) => {
+  if(evt.key == "Enter" && evt.key !== "Shift"){
+    evt.preventDefault();
+    sendBtn.click();
+  }
+  return false;
+});
+
+nameEntry.addEventListener("keydown", (evt) => {
+  if(evt.key == "Enter") {
+    evt.preventDefault();
+    setName.click();
+  }
+  return false;
 });
 
 var chat = {
@@ -25,18 +48,22 @@ var chat = {
     });
 
     setInterval(() => {
-      chat.send("PING PONG","ping");
+      chat.send("","ping");
     },5000);
 
   },
 
   send: (message, type) => {
     let msg = {
+      user: chat.name,
       text: sendMsg.value || message,
       type: type
     }
+
+    if(typeof(msg.text) !== "string") return false;
+
     chat.socket.send(JSON.stringify(msg));
-    sendMsg.value = "";
+    if(type !== "ping") sendMsg.value = "";
     return false;
   },
 
