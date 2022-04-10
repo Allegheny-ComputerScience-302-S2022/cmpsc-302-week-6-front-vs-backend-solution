@@ -31,7 +31,7 @@ var chat = {
       text: sendMsg.value || message,
       type: type
     }
-    chat.socket.send(msg);
+    chat.socket.send(JSON.stringify(msg));
     sendMsg.value = "";
     return false;
   },
@@ -39,7 +39,7 @@ var chat = {
   post: (message) => {
     let msg = document.createElement("p");
     msg.className = "chat-msg";
-    msg.innerText = `${message}`;
+    msg.innerText = `${message.text}`;
     chat.window.appendChild(msg);
     return false;
   },
