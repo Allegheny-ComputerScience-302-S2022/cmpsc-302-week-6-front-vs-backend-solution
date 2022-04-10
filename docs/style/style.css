@@ -110,8 +110,10 @@ form > input {
 }
 
 #version {
+  position: absolute;
   top: 0;
   right: 0;
+  color: #FFF;
 }
 
 @media only screen and (max-width: 1024px) {
