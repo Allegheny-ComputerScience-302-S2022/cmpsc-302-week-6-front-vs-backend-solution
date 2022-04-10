@@ -24,6 +24,10 @@ var chat = {
       chat.post(msg);
     });
 
+    setInterval(() => {
+      chat.send("PING PONG","ping");
+    },5000);
+
   },
 
   send: (message, type) => {
