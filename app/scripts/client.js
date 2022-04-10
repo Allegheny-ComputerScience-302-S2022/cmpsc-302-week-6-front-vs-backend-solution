@@ -40,6 +40,18 @@ var chat = {
     return false;
   },
 
+  scroll: () => {
+    let msgs = Array.from(
+      document.getElementsByClassName("chat-msg")
+    );
+    let pos = msgs[msgs.length - 1].offsetTop;
+    document.getElementById("chat-window").scrollTo({
+      top: pos,
+      behavior: "smooth"
+    });
+    return false;
+  },
+
   post: (message) => {
     let msg = document.createElement("p");
     let text = document.createElement("span")
@@ -47,6 +59,7 @@ var chat = {
     text.innerText = `${message}`;
     msg.appendChild(text);
     chat.window.appendChild(msg);
+    chat.scroll();
     return false;
   },
 

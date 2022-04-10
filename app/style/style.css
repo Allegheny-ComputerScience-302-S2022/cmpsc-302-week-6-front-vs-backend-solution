@@ -30,6 +30,8 @@ form > input {
   color: #FFF;
   background: #666;
   padding: 5%;
+  overflow: scroll;
+  animation: .15s;
 }
 
 #chat-window > p {
