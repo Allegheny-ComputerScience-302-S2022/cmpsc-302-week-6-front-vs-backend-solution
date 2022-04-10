@@ -91,3 +91,9 @@ var chat = {
   },
 
 };
+
+// Version checking for the Professor's sanity
+var modified = document.lastModified;
+var version = modified.replace(new RegExp("[\/: ]", "g"), ".");
+
+document.getElementById("version").innerText = `CatChat v.${version}`;
