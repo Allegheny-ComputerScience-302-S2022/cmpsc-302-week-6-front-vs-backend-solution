@@ -1,4 +1,4 @@
-var host = "ws://" + "cmpsc-302-chat-server.herokuapp.com";
+var host = "wss://cmpsc-302-chat-server.herokuapp.com";
 
 // Manage the username dialog
 
