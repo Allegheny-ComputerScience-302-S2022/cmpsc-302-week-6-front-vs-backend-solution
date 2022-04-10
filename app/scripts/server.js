@@ -39,8 +39,7 @@ socket.on("connection", (sock, request) => {
     let msg = message.text.toString();
     let type = emoji[message.type];
     for (let user in users) {
-      console.log(type);
-      if (type === "ping") break;
+      if (message.type === "ping") break;
       users[user].send(`${type} ${msg}`);
     }
   });
