@@ -11,7 +11,7 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 85vh auto;
+  grid-template-rows: 85vh 15vh;
   height: 100vh;
   color: #222;
 }
@@ -93,6 +93,7 @@ form > input {
 
 #chat-window > p {
   margin: .5%;
+  font-size: 2rem;
 }
 
 #chat-window > p:first-child {
@@ -131,6 +132,7 @@ form > input {
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: 100% 100%;
+    height: 85%;
   }
 
   #chat-mgmt textarea {
