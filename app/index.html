@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <title>CMPSC 302: Cat Chat</title>
     <link rel="stylesheet" href="https://use.typekit.net/sgy2rsb.css">
@@ -12,6 +12,7 @@
         <h2>😸 Hi! To use CatChat, you need a username!😸</h2>
         <p>Please set one below.</p>
         <form id = "nameForm">
+          <label for="nameEntry" title="Username selection"></label>
           <input type="text" id = "nameEntry"></input>
           <button id = "setName" type = "button">
             ➡️ 
@@ -21,6 +22,7 @@
       </div>
       <div id="chat-mgmt">
         <form id = "chatForm" onsubmit="return chat.send(this, 'normal')">
+          <label for="sendMsg" title="Message entry"></label>
           <textarea id = "sendMsg" disabled></textarea>
           <button id = "sendBtn" disabled>
             📤
