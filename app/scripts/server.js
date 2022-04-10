@@ -36,8 +36,7 @@ socket.on("connection", (sock, request) => {
 
   sock.on("message", (message) => {
     message = JSON.parse(message);
-    console.log(message)
-    let name = message.name;
+    let name = message.user;
     let msg = message.text;
     let type = emoji[message.type];
     for (let user in users) {
