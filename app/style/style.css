@@ -1,15 +1,32 @@
+html {
+  font-family: lores-21-serif, sans-serif;
+}
+
 body {
   margin: 0;
+  background: #002144;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-rows: 85vh auto;
   height: 100vh;
+  color: #222;
 }
 
 form {
   padding: 2%;
+}
+
+textarea {
+  background: none;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  color: #FFF;
+  font-family: lores-21-serif, sans-serif;
+
 }
 
 form > textarea, form > button {
@@ -36,20 +53,37 @@ form > input {
   transform: translateY(-50%);
 }
 
+#chatLogin form > button {
+  font-size: 3em;
+  background: none;
+  border: 0;
+}
+
 #chat-mgmt {
-  background: #999;
+  border-right: 1px solid #FFF:
+}
+
+#chat-mgmt form {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+#chat-mgmt form > button {
+  background: none;
+  border: none;
+  font-size: 3em;
 }
 
 #chat-window {
   color: #FFF;
-  background: #666;
-  padding: 5%;
+  margin: 2.5%;
   overflow: scroll;
   animation: .15s;
+  width: 95vw;
 }
 
 #chat-window > p {
-  margin: 5% 0;
+  padding: 1%;  
 }
 
 #chat-window > p:first-child {
@@ -57,21 +91,20 @@ form > input {
 }
 
 #chat-window > p > .chat-msg {
-  background: #88FFFC;
-  padding: 1%;
   border-radius: 5px;
+  text-shadow: 1px 1px #222;
+  word-wrap: break-word;
 }
 
 #chat-window > p:nth-of-type(odd) > .chat-msg {
-  background: #FF8888;
+
 }
 
 @media only screen and (max-width: 1024px) {
   
   main {
     grid-template-columns: auto;
-    grid-template-rows: 90vh auto;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }  
 
   #chat-mgmt {
@@ -80,17 +113,16 @@ form > input {
 
   #chat-mgmt form {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 90% 10%;
     grid-template-rows: 100% 100%;
-    height: 100%;
   }
 
   #chat-mgmt textarea {
     font-size: 2rem;
   }
   
-  #chat-mgmt button {
-    font-size: 2rem;
+  #chat-mgmt form > button {
+    font-size: 1em;
     bottom: 0;
   }
   
@@ -99,7 +131,7 @@ form > input {
   }
 
   #chatLogin, #chatLogin input, #chatLogin button {
-    font-size: 3rem;
+    font-size: 1em;
   }
 
 }
