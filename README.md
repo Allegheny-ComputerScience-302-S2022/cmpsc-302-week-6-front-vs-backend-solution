@@ -1,41 +1,12 @@
-# `CMPSC 302` Web Development, Week 4: Basic Javascript (i.e. Simon)
+# `CMPSC 302` Web Development, Week 6: Front- vs. Back-end
 
-* Assigned: 30 March 2022, 1:30 PM
+* Assigned: 11 April 2022, 1:30 PM
 * Due: 10 April 2022, 11:59 PM
 
-## Beep Boop; Beep Boop; BRR BRR BRR
-
-Your goal over the course of the next two weeks is to build a reasonably-function version of the hit Hasbro game, Simon.
-
-[![It was LIT](https://img.youtube.com/vi/G6p7zRsECaI/maxresdefault.jpg)](https://www.youtube.com/watch?v=G6p7zRsECaI)
-
-To do this, we will learn the basics of Javscript, namely `events` and `functions`. This will fall in line with our understanding
-that HTML and CSS largely _mean_ things and that Javascript _does_ things. However, there are a few steps that we'll look at along
-the way, namely:
-
-|Step |Expected Date |
-|:----|:-------------|
-|Design (incl. mobile)| EOD, 1 April 2022 |
-|Functionality (i.e. playing the game| 10 April 2022 |
-
-The above means that we'll likely get to actually _playing_ the game in the second week of the assignment. Our first goal is to
-make the game UI workable. To do this, there are a few requirements.
+## Talking to myself
 
 ### Requirements
-
 #### Design
-
-* Full UI containing:
-  * 4 multicolored `<button>`s in either a "radial" (i.e. circle) design _or_ square grid design
-  * a footer which displays game name, `Start` button, and score
-* `<button>`s must be given IDs:
-  * `top-left`
-  * `top-right`
-  * `bottom-left`
-  * `bottom-right`
-  * `start-button`
-* The score display in the footer should be give the ID `points` (see above for required contents)
-* The design should be fully responsive, changing form when we hit the mobile "breakpoint", defined here as `1024px` (this definition varies)
 
 ##### Wireframes
 
@@ -52,17 +23,6 @@ information population. For the purposes of our assignment, they're relatively g
 
 #### Functionality
 
-(Note: all functionality should be dictated by the `scripts/ui.js` file.)
-
-* Game "activates" when `Start` button clicked
-  * This should convert the "Press Start to Play" text to a "Points: ##" display (where `##` is the varying number of points
-* The game should generate random patterns that increase by 1 additional step after each "successful" round
-  * Here, "successful" means that a player achieved the demonstrated pattern in the given amount of time
-* The player's turn "fails" if they take more than `5 * level` seconds to enter any one part of the pattern
-  * `level` should be taken to mean the number of steps in the pattern
-* On each successfuly turn, a player's score should increase by `1`
-* If a player fails to complete the pattern, the start button should turn a "Game Over" button, and the game should stop.
-
 ## Making a GitHub Pages page
 
 This assignment also requires you to make your work available via GitHub Pages. For a primer on where to find it
@@ -76,6 +36,25 @@ and how to do it:
   * This step is _required_ for your HTML and CSS to pass validation!
 A green box will appear at the top of the page listing the random URL that you've been assigned. This is your
 URL!
+
+## Setting up a Heroku app
+
+To do the server ("back-end") part of this assignment, you'll need to head over to [Heroku](https://www.heroku.com) and create
+a free account. Once you've created one:
+
+1. Log in and find the `New` button (it's in the upper left corner)
+2. Click `Create new app` and name it: `cmpsc-302-chat-server-YOUR_GITHUB_USERNAME`
+3. Click `Create app`
+4. On the resulting screen, locate the `Deployment` section
+5. Click `GitHub`
+6. Connect Heroku to your GitHub account
+7. Once you've linked the account, select the `Allegheny-ComputerScience-302-S2022` organization
+8. Search for your repository and link it
+
+Once you've linked the repository, any `push` you make to your GitHub repository will also build the `app` directory on Heroku
+at the address:
+
+`APP_NAME`.heroku
 
 ## Accepting the assignment
 

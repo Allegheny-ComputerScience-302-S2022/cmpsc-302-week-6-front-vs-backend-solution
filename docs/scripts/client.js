@@ -48,7 +48,7 @@ var chat = {
 
     setInterval(() => {
       chat.send("","ping");
-    },5000);
+    },1000);
 
   },
 
