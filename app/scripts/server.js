@@ -14,7 +14,8 @@ var users = {};
 
 const emoji = {
   "greet": "👋",
-  "normal": "🗣️"
+  "normal": "🗣️",
+  "ping": "🔊",
 }
 
 socket.on("connection", (sock, request) => {
@@ -37,7 +38,7 @@ socket.on("connection", (sock, request) => {
     message = JSON.parse(message);
     let msg = message.text.toString();
     let type = emoji[message.type];
-    if (type == "ping") return false;
+    if (type === "ping") return false;
     for (let user in users) {
       users[user].send(`${type} ${msg}`);
     }
