@@ -4,8 +4,6 @@ const port = process.env.PORT || 8080;
 const index = "index.html";
 
 const server = express()
-  .use(express.static(process.cwd()))
-  .use((request, result) => result.sendFile(index, {root: process.cwd()}))
   .listen(port, () => console.log(`Listening on ${port}`));
 
 const socket = new Server({ server });
