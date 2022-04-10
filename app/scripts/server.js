@@ -38,8 +38,8 @@ socket.on("connection", (sock, request) => {
     message = JSON.parse(message);
     let msg = message.text.toString();
     let type = emoji[message.type];
-    if (type === "ping") break;
     for (let user in users) {
+      if (type === "ping") break;
       users[user].send(`${type} ${msg}`);
     }
   });
