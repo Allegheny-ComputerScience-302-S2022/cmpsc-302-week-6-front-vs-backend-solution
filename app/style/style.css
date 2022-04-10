@@ -33,12 +33,13 @@ form > input {
 }
 
 .chat-msg {
-  background: blue;
+  background: #88FFFC;
   padding: 1%;
+  border-radius: 5px;
 }
 
 .chat-msg:nth-of-type(2n) {
-  background: red;
+  background: #FF8888;
 }
 
 @media only screen and (max-width: 1024px) {

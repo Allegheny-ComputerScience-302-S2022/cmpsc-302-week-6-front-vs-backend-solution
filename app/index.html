@@ -6,7 +6,7 @@
   <body>
     <main>
       <div id="chat-mgmt">
-        <form id = "chatForm" onsubmit="return chat.send()">
+        <form id = "chatForm" onsubmit="return chat.send(this, 'normal')">
           <input type="text" id = "nameEntry"></input>
           <button id = "setName" type = "button">
             Set UserName

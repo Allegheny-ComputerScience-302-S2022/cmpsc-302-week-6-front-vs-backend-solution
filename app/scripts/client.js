@@ -38,8 +38,10 @@ var chat = {
 
   post: (message) => {
     let msg = document.createElement("p");
-    msg.className = "chat-msg";
-    msg.innerText = `${message.text}`;
+    let text = document.createElement("span")
+    text.className = "chat-msg";
+    text.innerText = `${message}`;
+    msg.appendChild(text);
     chat.window.appendChild(msg);
     return false;
   },

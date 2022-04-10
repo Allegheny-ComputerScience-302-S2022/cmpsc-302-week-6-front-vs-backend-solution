@@ -14,7 +14,7 @@ var users = {};
 
 const emoji = {
   "greet": "👋",
-  "normal": "🕫"
+  "normal": "🗣️"
 }
 
 socket.on("connection", (sock, request) => {
