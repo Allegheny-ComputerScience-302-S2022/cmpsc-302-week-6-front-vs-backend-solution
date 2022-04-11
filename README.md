@@ -46,11 +46,11 @@ or (in our case) _stay connected_ to coordinate events like sending messages to 
 
 ###### Desktop
 
-![On yr main](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/desktop-wireframe.png)
+![On yr main](https://chat.cmpsc302.chompe.rs/media/desktop-wireframe.png)
 
 ###### Mobile
 
-![On the Go](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/mobile-wireframe.png)
+![On the Go](https://chat.cmpsc302.chompe.rs/media/mobile-wireframe.png)
 
 #### Functionality
 

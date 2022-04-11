@@ -121,10 +121,11 @@ form > input {
   main {
     grid-template-columns: auto;
     font-size: 1.5rem;
+    grid-template-rows: 15vh 85vh;
   }  
 
   #chat-mgmt {
-    order: 2;
+    order: 1;
   }
 
   #chat-mgmt form {
@@ -144,7 +145,7 @@ form > input {
   }
   
   #chat-window {
-    order: 1
+    order: 2
   }
 
   #chatLogin, #chatLogin input, #chatLogin button {
