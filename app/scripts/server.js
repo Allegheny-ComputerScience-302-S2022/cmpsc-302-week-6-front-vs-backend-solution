@@ -31,6 +31,10 @@ socket.on("connection", (sock, request) => {
     delete users[uid];
   });
 
+  for(let user in users) {
+    users[user].send("Hello from Cat Chat!");
+  }
+
   sock.on("message", (message) => {
     message = JSON.parse(message);
     let name = message.user;
