@@ -8,7 +8,7 @@ docs/style/style.css:
   MatchFileFragment --fragment "@media" --count 1 --description "[CSS] style.css contains a media query for responsive design"
 
 docs/script/client.js:
-  MatchFileFragment --fragment "keydown" --count 1 --descrpition "[Javascript] client.js handles at least 1 keydown event"
+  MatchFileFragment --fragment "keydown" --count 1 --description "[Javascript] client.js handles at least 1 keydown event"
   MatchFileFragment --fragment "new Websocket(" --count 1 --exact --description "[Javascript] client.js creates a WebSocket"
   MatchFileFragment --fragment "setInterval" --count 1 --description "[Javascript] client.js uses an interval for at least a 'keep-alive ping'"
   MatchFileRegex --regex "JSON\.stringify\(\)" --count 1 --description "[Javascript] client.js sends JSON to the WebSocket"
