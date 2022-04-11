@@ -19,6 +19,8 @@ socket.on("connection", (sock, request) => {
 
   let uid = 0;
 
+  console.log(request);
+
   while(true) {
     if(!users.hasOwnProperty(uid)) {
       users[uid] = sock;

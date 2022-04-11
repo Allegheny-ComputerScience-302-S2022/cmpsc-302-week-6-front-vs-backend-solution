@@ -38,7 +38,9 @@ or (in our case) _stay connected_ to coordinate events like sending messages to 
 * A two-row grid which features a chat input box and scrolling input window which changes based on screen width, per the wireframes below
 * A login "modal" (i.e. pop-over window) that requires users to set a user name before entering the chat
 * `HTML` form elements to accomplish user inputs for user names and chat messages
+* 
 
+#### Functionality
 
 ##### Wireframes
 
