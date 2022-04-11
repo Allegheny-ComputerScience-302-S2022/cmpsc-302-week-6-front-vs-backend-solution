@@ -56,6 +56,7 @@ form > input {
   font-size: 2em;
   background: none;
   border: 0;
+  color: #FFF;
 }
 
 #chatLogin form > input {
@@ -80,6 +81,7 @@ form > input {
   background: none;
   border: none;
   font-size: 3em;
+  color: #FFF;
 }
 
 #chat-window {
