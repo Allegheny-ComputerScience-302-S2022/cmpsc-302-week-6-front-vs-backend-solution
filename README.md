@@ -1,17 +1,46 @@
 # `CMPSC 302` Web Development, Week 6: Front- vs. Back-end
 
 * Assigned: 11 April 2022, 1:30 PM
-* Due: 10 April 2022, 11:59 PM
+* Due: 25 April 2022, 11:59 PM
 
-## Talking to myself
+## Having a chat
+
+![o hai lets have uh chat](https://www.bestcat.com/files/variants/wqpfaohu4nwi1ycfi6pvs3rqx7h7/95276c0da81b822f513711c81fff742daadd87617d24212e679e52fc18befcd2/Tea_Party.jpg)
+
+This project results in a basic chat server, i.e. an app that allows anyone to join and chat with anyone else present on the app's web page.
+Much of this relies on concepts we've been learning over the last three or four weeks, and introduces a new way to use Javascript: via `nodejs`.
+While this may seem new -- and, to some extent is -- it's not a new language, just a _server-side_ ("back-end") implentation of Javascript.
+
+### Front- vs. Back-end
+
+The section header appears to set up an oppositional relationship between these two "layers" of a web app. However, they're really the two
+complementary layers of anything that calls itself an "app." Developers refer to the various configurations of layers that make up an 
+application as that app's "stack."
+
+For this project, you'll build _both_.
+
+#### Supreme clientele
+
+We think of "front-end," we're really thinking about everything that's _client_-side, that is HTML, CSS, and proper Javascript. Each of these
+pieces are rendered (i.e. cobbled together) by the browser. The user accessing the site is referred to as a "client" in this case and all
+of this work is, essentially, their responsibility. Thankfully, modern browers take care of this.
+
+#### Behind your back
+
+Any functionality that's rendered by a third-party _server_ is often referred to as "back-end." User browsers aren't responsible for this and
+generally this layer is described (in part) as a "listener," waiting for a specific "front-end" client to ask to connect and retrieve information 
+or (in our case) _stay connected_ to coordinate events like sending messages to everyone in a chat room.
 
 ### Requirements
+
 #### Design
 
-##### Wireframes
+* A two-row grid which features a chat input box and scrolling input window which changes based on screen width, per the wireframes below
+* A login "modal" (i.e. pop-over window) that requires users to set a user name before entering the chat
+* `HTML` form elements to accomplish user inputs for user names and chat messages
 
-Tradtionally, when working on designs in the web space, you'll develop or be given "wireframes." These can range from sparse to dense in 
-information population. For the purposes of our assignment, they're relatively general.
+
+##### Wireframes
 
 ###### Desktop
 
@@ -34,10 +63,13 @@ and how to do it:
 - [ ] click `Save`
 - [ ] One last step: make the page _public_ by setting `GitHub Pages visibility` to `Public`
   * This step is _required_ for your HTML and CSS to pass validation!
+
 A green box will appear at the top of the page listing the random URL that you've been assigned. This is your
 URL!
 
 ## Setting up a Heroku app
+
+### Creating an app
 
 To do the server ("back-end") part of this assignment, you'll need to head over to [Heroku](https://www.heroku.com) and create
 a free account. Once you've created one:
@@ -50,11 +82,25 @@ a free account. Once you've created one:
 6. Connect Heroku to your GitHub account
 7. Once you've linked the account, select the `Allegheny-ComputerScience-302-S2022` organization
 8. Search for your repository and link it
+9. As a final step, set up automatic deploy from the `main` branch
 
 Once you've linked the repository, any `push` you make to your GitHub repository will also build the `app` directory on Heroku
 at the address:
 
-`APP_NAME`.heroku
+```
+APP_NAME.herokuapp.com/
+```
+
+### Setting up "Buildpacks"
+
+To tell the Heroku app exactly what it is (i.e. that it's a Node app) and that we need to build our app from the `app/` folder
+(rather than `docs/` -- the "client" side).
+
+1. Locate the `Settings` menu option near the top of the screen
+2. Scroll to the `Buildpacks` section
+4. Click `Add buildpack``
+3. Add the `https://github.com/timanovsky/subdir-heroku-buildpack.git` repository to the app
+4. Also search for and add the `heroku/nodejs` pack
 
 ## Accepting the assignment
 
