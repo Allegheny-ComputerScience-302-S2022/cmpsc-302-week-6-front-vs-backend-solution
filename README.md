@@ -38,19 +38,44 @@ or (in our case) _stay connected_ to coordinate events like sending messages to 
 * A two-row grid which features a chat input box and scrolling input window which changes based on screen width, per the wireframes below
 * A login "modal" (i.e. pop-over window) that requires users to set a user name before entering the chat
 * `HTML` form elements to accomplish user inputs for user names and chat messages
-* 
 
 #### Functionality
+
+* User name as a requirement to "unlock" the message form
+* Ability to send a message by pressing only `Enter` key in message entry
+* Connection to your Heroku `nodejs` server to transmit messages
+  * such that multiple parties can send and receieve messages in the main window
+* Ability to "persist" connections by sending "ping" messages on a regular basis
+  * "Regular basis" means once per second until a user quits the server
+  * "quits the server" just means "closes the window"
+* One additional feature that _you develop_ to implement
+  * if you're looking for ideas, the professor has many _tailored to you_!
+
+Using the above basic functionality, a testing script should be able to send and receive `20` messages over a span of 4 minutes. This is _important_:
+
+* To pass this test, each your message must have the `.chat_msg` selector -- this can be done with any element, but _must be the right selector_
+  * If you're not passing the `[CHAT]` test, it's _likely_ that the above is the reason
+
+
+#### Writing
+
+This assignment requires a bit of writing -- namely via a short description of your intended additional functionality [see above](#Functionality).
+To complete the writing, finish the `TODO` in the `writing/` directory of the main folder of the repository. Use the `feature.md` file to:
+
+* describe the intended functionality in a paragraph no more than 150 words
+* describe _how_ you intend to implement it
+* in the code block provided in the file, paste the particular code you used to implement it
+  * wondering what a "code block" is? You'll know it when you see it.
 
 ##### Wireframes
 
 ###### Desktop
 
-![On yr main](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/desktop-wireframe.png)
+![On yr main](https://chat.cmpsc302.chompe.rs/media/wireframe-desktop.png)
 
 ###### Mobile
 
-![On the Go](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/mobile-wireframe.png)
+![On the Go](https://chat.cmpsc302.chompe.rs/media/wireframe-mobile.png)
 
 #### Functionality
 
