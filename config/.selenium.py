@@ -25,13 +25,13 @@ def main():
 
   page = sys.argv[1]
 
-  pages_api = os.getenv("PAGES_URL")
-  data = json.loads(pages_api)
-  endpoint = data["html_url"]
+  #pages_api = os.getenv("PAGES_URL")
+  #data = json.loads(pages_api)
+  #endpoint = data["html_url"]
 
   # Local Testing
-  #driver.get(f"https://chat.cmpsc302.chompe.rs/{page}")
-  driver.get(f"{endpoint}{page}")
+  driver.get(f"https://chat.cmpsc302.chompe.rs/{page}")
+  #driver.get(f"{endpoint}{page}")
 
   username_entry = driver.find_element(by=By.CSS_SELECTOR, value="#nameEntry")
   username_submit = driver.find_element(by=By.CSS_SELECTOR, value="#setName")
@@ -49,7 +49,7 @@ def main():
 
   chat_messages = driver.find_elements(by=By.CSS_SELECTOR, value=".chat-msg")
 
-  if len(chat_messages) > 21:
+  if len(chat_messages) > 20:
     exit(0)
   exit(1)
 
