@@ -29,8 +29,12 @@ textarea {
   font-size: 1.5em;
 }
 
+button {
+    font-family: lores-21-serif, sans-serif;
+}
+
 form > textarea, form > button {
-  width: 100%;
+  width: 95%;
   display: block;
   margin: 1% auto;
 }
@@ -54,9 +58,11 @@ form > input {
 
 #chatLogin form > button {
   font-size: 2em;
-  background: none;
+  background: #F00;
   border: 0;
   color: #FFF;
+  width: 20%;
+  border-radius: 10px;
 }
 
 #chatLogin form > input {
@@ -68,28 +74,32 @@ form > input {
   color: #FFF;
 }
 
-#chat-mgmt {
-  border-right: 1px solid #FFF;
-}
-
 #chat-mgmt form {
   display: grid;
   grid-template-columns: 90% 10%;
 }
 
 #chat-mgmt form > button {
-  background: none;
   border: none;
-  font-size: 3em;
+  font-size: 2em;
   color: #FFF;
+  background: #222;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  background: #F00;
 }
 
 #chat-window {
   color: #FFF;
   margin: 2.5%;
-  overflow: scroll;
+  overflow-y: scroll;
   animation: .15s;
   width: 95vw;
+  padding-right: 5%;
 }
 
 #chat-window > p {
@@ -107,10 +117,6 @@ form > input {
   word-wrap: break-word;
 }
 
-#chat-window > p:nth-of-type(odd) > .chat-msg {
-
-}
-
 #version {
   position: absolute;
   top: 0;
@@ -119,12 +125,12 @@ form > input {
 }
 
 @media only screen and (max-width: 1024px) {
-  
+
   main {
     grid-template-columns: auto;
     font-size: 1.5rem;
     grid-template-rows: 15vh 85vh;
-  }  
+  }
 
   #chat-mgmt {
     order: 1;
@@ -140,12 +146,14 @@ form > input {
   #chat-mgmt textarea {
     font-size: 2rem;
   }
-  
+
   #chat-mgmt form > button {
-    font-size: 1em;
+    font-size: 2em;
     bottom: 0;
+    width: 75%;
+    position: relative;
   }
-  
+
   #chat-window {
     order: 2
   }
