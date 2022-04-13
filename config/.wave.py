@@ -23,7 +23,7 @@ def main():
   response = json.loads(validator.text)
 
   contrast_count = int(response['categories']['contrast']['count'])
-  error_count = int(response['categories']['error']['count])
+  error_count = int(response['categories']['error']['count'])
 
   if contrast_count + error_count < 1:
     sys.exit(0)
