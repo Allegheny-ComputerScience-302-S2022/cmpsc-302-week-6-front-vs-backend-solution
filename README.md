@@ -123,9 +123,19 @@ APP_NAME.herokuapp.com/
 To tell the Heroku app exactly what it is (i.e. that it's a Node app) and that we need to build our app from the `app/` folder
 (rather than `docs/` -- the "client" side).
 
-1. Locate the `Settings` menu option near the top of the screen
-2. Scroll to the `Buildpacks` section
-4. Click `Add buildpack``
+#### Editing configuration variables
+
+1. Locate the "Config Vars" section of the page
+2. You may need to click `Reveal Config Vars` to reveal text inputs
+3. In the `KEY` field, type `PROJECT_PATH`
+4. In the corresponding `VALUE` field type `app`
+
+#### Buildpacks
+
+Remaining on the "Settings" page:
+
+1. Scroll to the `Buildpacks` section
+2. Click `Add buildpack``
 3. Add the `https://github.com/timanovsky/subdir-heroku-buildpack.git` repository to the app
 4. Also search for and add the `heroku/nodejs` pack
 
